@@ -19,7 +19,8 @@
                   <div class="detail-box">
                     <h1>
                       Crypto <br />
-                      Currency
+                      Currency Hello
+                      {{ appName }}
                     </h1>
                     <p>
                       Explicabo esse amet tempora quibusdam laudantium, laborum
@@ -118,6 +119,11 @@ export default {
   components: {
     Header,
   },
+  data(){
+    return{
+      appName: process.env.VUE_APP_NAME
+    }
+  }
 };
 </script>
 

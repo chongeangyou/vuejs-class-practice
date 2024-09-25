@@ -4,6 +4,7 @@ module.exports = defineConfig({
   devServer:{
     //proxy: 'http://172.23.129.202'
     //proxy: 'http://localhost:80/docs'
-    proxy: 'https://api.tfdevs.com'
+    // proxy: 'https://api.tfdevs.com'
+    proxy: process.env.VUE_APP_URL
   }
 })
