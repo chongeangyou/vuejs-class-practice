@@ -18,7 +18,7 @@
                 <div class="col-md-6">
                   <div class="detail-box">
                     <h1>
-                      Crypto <br />
+                      Crypto Test <br />
                       Currency Hello
                       {{ appName }}
                     </h1>
