@@ -76,33 +76,39 @@
 </template>
 <script>
 import ServiceCard from "@/components/sub_components/ServiceCard.vue";
+import useServiceStore from "@/store/service.js";
+import { mapState } from "pinia";
 export default {
   components: {
     ServiceCard,
   },
   data() {
     return {
-      serviceData: [
-        {
-          image: "images/s1.png",
-          title: "CURRENCY WALLET",
-          description:
-            "fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using",
-        },
-        {
-          image: "images/s2.png",
-          title: "CURRENCY WALLET",
-          description:
-            "fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using",
-        },
-        {
-          image: "images/s3.png",
-          title: "CURRENCY WALLET",
-          description:
-            "fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using",
-        },
-      ],
+      // serviceData: [
+      //   {
+      //     image: "images/s1.png",
+      //     title: "CURRENCY WALLET",
+      //     description:
+      //       "fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using",
+      //   },
+      //   {
+      //     image: "images/s2.png",
+      //     title: "CURRENCY WALLET",
+      //     description:
+      //       "fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using",
+      //   },
+      //   {
+      //     image: "images/s3.png",
+      //     title: "CURRENCY WALLET",
+      //     description:
+      //       "fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using",
+      //   },
+      // ],
     };
   },
-};
+  computed:{
+    ...mapState(useServiceStore, ['serviceData'])
+  },
+ 
+}
 </script>

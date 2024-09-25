@@ -1,7 +1,7 @@
-import { createPinia} from "pinia";
+import { defineStore} from "pinia"
 
 
-const useServiceStore = definedStore('service', {
+const useServiceStore = defineStore('service', {
     state: () =>({
         serviceData: [
             {
@@ -25,6 +25,10 @@ const useServiceStore = definedStore('service', {
           ],
     }),
     actions: {
-    
+      // getAllServices(){
+      //   return this.serviceData;
+      // }
     }
 })
+
+export default useServiceStore

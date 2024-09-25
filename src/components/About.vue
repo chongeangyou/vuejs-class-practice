@@ -25,20 +25,25 @@
 </template>
 <script>
 import AboutElement from "@/components/sub_components/AboutElement.vue";
+import useAboutStore from "@/store/about.js";
+import { mapState } from "pinia";
 export default {
   components: {
     AboutElement,
   },
   data() {
     return {
-      aboutData: [
-        {
-          image: "images/about-img.png",
-          title: "We Are Finexo",
-          description: "Hellddldlldldkkdjkdkdk",
-        },
-      ],
-    };
+      // aboutData: [
+      //   {
+      //     image: "images/about-img.png",
+      //     title: "We Are Finexo",
+      //     description: "Hellddldlldldkkdjkdkdk",
+      //   },
+      // ],
+    }
   },
+  computed: {
+    ...mapState(useAboutStore, ["aboutData"])
+  }
 };
 </script>
