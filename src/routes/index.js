@@ -16,6 +16,7 @@ import User from '@/pages/User.vue'
 
 import Repository from '@/pages/Repository.vue'
 import Register from '@/pages/Register.vue'
+import NotFound from '@/pages/NotFound.vue'
 
 
 const routes =[
@@ -39,7 +40,8 @@ const routes =[
     {path: '/user', component: User},
 
     {path: '/repos', component: Repository},
-    {path: '/register', component: Register}
+    {path: '/register', component: Register},
+    {path: '/:pathMatch(.*)*', component: NotFound}
 ]
 
 const router = createRouter({

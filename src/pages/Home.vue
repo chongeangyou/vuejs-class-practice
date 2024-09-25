@@ -17,7 +17,7 @@ import OurTeam from "@/components/OurTeam.vue";
 import Client from "@/components/Client.vue";
 // import Info from "@/components/Info.vue";
 import Footer from "@/components/Footer.vue";
-
+import NotFound from "@/pages/NotFound.vue";
 export default {
   name: "App",
   components: {
@@ -29,6 +29,7 @@ export default {
     Client,
     // Info,
     Footer,
+    NotFound
   },
 };
 </script>

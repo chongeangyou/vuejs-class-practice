@@ -21,7 +21,26 @@
   </div>
   
 </template>
-<script>
+
+<script setup>
+import CardCourse from "@/components/sub_components/CardCourse.vue";
+import Header from "@/components/Header.vue";
+//import Footer from "@/components/Footer.vue"
+import axios from "axios";
+import { ref, onMounted } from 'vue'
+var courses = ref([]);
+
+onMounted(async ()=>{
+  const url = "/v1/courses"; // link call from API,
+    const response = await axios.get(url); // Promise and async
+    const course = response.data;
+    courses.value = course;
+    console.log(courses);
+});
+
+</script>
+
+<!-- <script>
 import CardCourse from "@/components/sub_components/CardCourse.vue";
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue"
@@ -42,4 +61,4 @@ export default {
     console.log(courses);
   },
 };
-</script>
+</script> -->
