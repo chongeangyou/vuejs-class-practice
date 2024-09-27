@@ -22,7 +22,7 @@
   
 </template>
 
-<script setup>
+<!-- <script setup>
 import CardCourse from "@/components/sub_components/CardCourse.vue";
 import Header from "@/components/Header.vue";
 //import Footer from "@/components/Footer.vue"
@@ -38,13 +38,14 @@ onMounted(async ()=>{
     console.log(courses);
 });
 
-</script>
+</script> -->
 
-<!-- <script>
+<script>
 import CardCourse from "@/components/sub_components/CardCourse.vue";
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue"
 import axios from "axios";
+import {courseAPI} from "@/utils/api.js"
 export default {
   components: { Header,CardCourse, Footer },
   data() {
@@ -54,11 +55,12 @@ export default {
     };
   },
   async created() {
-    const url = "/v1/courses"; // link call from API,
-    const response = await axios.get(url); // Promise and async
+    //const url = "/v1/courses"; // link call from API,
+    //const response = await axios.get(url); // Promise and async
+    const response = await axios.get(courseAPI());
     const courses = response.data;
     this.courses = courses;
     console.log(courses);
   },
 };
-</script> -->
+</script>
